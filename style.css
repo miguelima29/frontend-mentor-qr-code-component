@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+  --color-slate-900: #1f314f;
+  --color-slate-800: #68778d;
+  --color-slate-300: #D5E1EF;
+  --color-white: #fff;
+  --color-blue-600: #2c7dfa;
+  --color-blue-500: #3685ff;
+
+  --font-size-text-preset-1: 22px;
+  --font-size-text-preset-2: 15px;
+
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-500: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Outfit, sans-serif;
+  background-color: var(--color-slate-300);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+    width: 320px;
+    background-color: var(--color-white);
+    padding: var(--spacing-200, 16px) var(--spacing-200, 16px) var(--spacing-500, 40px) var(--spacing-200, 16px);
+    border-radius: 20px;
+}   
+
+.container-azul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-blue-600);
+    width:100%;
+    height:288px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container-azul svg {
+    position: relative;
+    z-index: 1;
+}
+
+.container-azul::before, .container-azul::after {
+    content: "";
+    position: absolute;
+    width: 328px;
+    height: 328px;
+    background-color: var(--color-blue-500);
+    border-radius: 50%;
+    z-index: 0;
+  
+}
+
+
+.container-azul::before {
+    top: -150px;
+    left: -150px;
+
+}
+
+.container-azul::after {
+    bottom: -230px;
+    right: -170px;
+}
+
+.container-branco{
+    display: flex;
+    padding-right: var(--spacing-200);
+    padding-left: var(--spacing-200);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-200);
+}
+
+
+.titulo {
+    color: var(--color-slate-900);
+    font-size: var(--font-size-text-preset-1);
+    line-height: 120%;
+    font-weight: 700;
+    text-align: center;
+}
+
+.paragrafo{
+    color: var(--color-slate-800);
+    text-align: center;
+    font-size: var(--font-size-text-preset-2);
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+}
